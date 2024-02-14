@@ -23,7 +23,7 @@ vim.cmd [[
 augroup jdtls_lsp
     autocmd!
     autocmd FileType java lua require'ghd8.jdtls_setup'.setup()
-    autocmd BufNewFile *.java lua require'ghd8.javapackage'.insertJavaPackage()
+    autocmd BufNewFile *.java lua require'ghd8.javautils'.insertJavaTemplate()
 augroup end
 ]]
 
