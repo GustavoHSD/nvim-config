@@ -64,6 +64,10 @@ lspconfig['jdtls'].setup({
 })
 --]]
 
+lspconfig['lua_ls'].setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+})
 
 lspconfig['tsserver'].setup({
 	capabilities = capabilities,

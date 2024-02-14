@@ -26,7 +26,8 @@ require'mason-lspconfig'.setup({
 		'jdtls',
 		'pyright',
 		'sqlls',
-		'rust_analyzer'
+		'rust_analyzer',
+        'lua_ls'
 	},
 	automatic_installation = true,
     handlers = handlers,
