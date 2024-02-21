@@ -15,6 +15,10 @@ local handlers =  {
             }
         }
     end,
+    ["tsserver"] = function()
+        require("ghd8.prettier")
+        vim.keymap.set({ 'n', 'v' }, '<leader>pr', ':Prettier<CR>', { noremap = true, silent = true })
+    end,
 }
 
 require'mason-lspconfig'.setup({

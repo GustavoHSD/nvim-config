@@ -17,8 +17,6 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
---vim.cmd("autocmd BufNewFile *.java lua require'ghd8.javaclass'.insertJavaPackage()")
-
 vim.cmd [[
 augroup jdtls_lsp
     autocmd!

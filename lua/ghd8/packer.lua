@@ -5,13 +5,13 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',
-		requires =  'nvim-lua/plenary.nvim' 
+		requires = 'nvim-lua/plenary.nvim'
 	}
 
-	use { 
-		'catppuccin/nvim', 
+	use {
+		'catppuccin/nvim',
 		as = 'catppuccin',
-		config = function() 
+		config = function()
 			vim.cmd('colorscheme catppuccin')
 		end
 	}
@@ -29,10 +29,11 @@ return require('packer').startup(function(use)
 	use {
 		'hrsh7th/nvim-cmp',
 		requires = {
-			'hrsh7th/cmp-buffer', 
-			'hrsh7th/cmp-path',		
+			'hrsh7th/cmp-buffer',
+			'hrsh7th/cmp-path',
 			'L3MON4D3/LuaSnip',
-			'saadparwaiz1/cmp_luasnip'
+			'saadparwaiz1/cmp_luasnip',
+            { 'tzachar/cmp-tabnine', run ='./install.sh', requires = 'hrsh7th/nvim-cmp' }, 
 		}
 	}
 
@@ -53,4 +54,14 @@ return require('packer').startup(function(use)
 	use { "mfussenegger/nvim-jdtls" }
 
     use { 'christoomey/vim-tmux-navigator' }
+
+    use { 'windwp/nvim-autopairs' }
+
+    use { 'windwp/nvim-ts-autotag' }
+
+    use { 'jose-elias-alvarez/null-ls.nvim'} 
+
+    use { 'MunifTanjim/prettier.nvim' }
+
 end)
+
